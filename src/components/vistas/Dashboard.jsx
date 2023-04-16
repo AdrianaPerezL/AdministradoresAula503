@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUsers, faChalkboardUser, faSchool } from '@fortawesome/free-solid-svg-icons'
 import '../../assets/styles/dashboard.css'
 import Navbar from './Navbar'
+import Sidebar from '../Sidebar'
 
 const Dashboard = () => {
   return (
     <>
+    <Sidebar>
       <Navbar />
 
       <div className='px-3 contenedordashboard2'>
@@ -52,7 +54,7 @@ const Dashboard = () => {
                  
              </div>
 
-
+             </Sidebar>
     </>
   )
 }

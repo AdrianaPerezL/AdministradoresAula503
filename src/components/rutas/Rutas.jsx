@@ -17,14 +17,14 @@ const Rutas = () => {
       <Route path='/' element={<IniciarSesion/>}></Route>
       <Route path='/registro' element={<Registro/>}></Route>
     </Routes>
-    <Sidebar>
+ 
     <Routes>
       <Route path="/dashboard" element={<Dashboard/>}/>
       <Route path="/cuestionarios" element={<Cuestionarios/>}/>
       <Route path="/estudiantes" element={<Estudiantes/>}/>
       <Route path="/materias" element={<Materias/>}/>
     </Routes>
-  </Sidebar>
+ 
     </BrowserRouter>
     </>
   )

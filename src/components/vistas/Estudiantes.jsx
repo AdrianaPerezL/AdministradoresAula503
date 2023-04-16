@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from './Navbar'
 import '../../assets/styles/Estudiantes.css'
+import Sidebar from '../Sidebar'
 
 const Estudiantes = () => {
   return (
     <>
+  <Sidebar>
     <Navbar/>
       <h4 class="headingChart">Perfiles registrados</h4>
       <div id="select">
@@ -96,6 +98,7 @@ const Estudiantes = () => {
           </table>
         </div>
       </div>
+      </Sidebar>
     </>
   )
 }
