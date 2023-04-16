@@ -3,6 +3,8 @@ import '../../assets/styles/RegistroAdmi.css'
 import Fondo from "../../assets/img/Fondo.png";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
+import logo from "../../assets/img/logo1.png"
+
 
 
 export const Registro = () => {
@@ -211,9 +213,10 @@ return errors;
 };
   return (
     
-    <div className="" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
+    <div className="mb-3" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
     backgroundSize:"cover" }}>
-        
+          <img src={logo} width="70px" className="m-2"/>
+   
       <section className="section-padding" onSubmit={handleLoginSession} >
         <div className="containerform">
           <div className=''>

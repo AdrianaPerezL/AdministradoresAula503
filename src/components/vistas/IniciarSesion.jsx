@@ -3,6 +3,7 @@ import "../../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../../assets/img/Fondo.png";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
+import logo from "../../assets/img/logo1.png"
 
 
 function IniciarSesion (){
@@ -144,6 +145,7 @@ return (
   <>
     <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
         backgroundSize:"cover" }}>
+     <img src={logo} width="70px" className="m-2"/>
       <section className="bodyLogin">
         <div className="card col-8 col-sm-4 col-md-4 ">
           <div className="card-body">
