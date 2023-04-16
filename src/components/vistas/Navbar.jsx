@@ -6,50 +6,43 @@ import '../../assets/styles/navbar.css'
 
 function Navbar() {
   return (
-    <div className="container-fluid ">
-      <div className="row ">
-        <div className="col">
-          <nav className="navbar navbar-expand-sm navbar-dark ">
-            <button
-              className="navbar-toggler d-lg-none"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapsibleNavId"
-              aria-controls="collapsibleNavId"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-            
-            </button>
-            <div className="collapse navbar-collapse" id="collapsibleNavId">
-              <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle navbarLink"
-                    href="#"
-                    id="dropdownId"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Admin
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdownId">
-                    <a className="dropdown-item" href="#">
-                      Profile
-                    </a>
-                 
-                    <a className="dropdown-item" href="#">
-                      Logout
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid justify-content-end">
+      <ul class="navbar-nav">
+     
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle d-flex align-items-center"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+              class="rounded-circle"
+              height="40"
+              alt="Portrait of a Woman"
+              loading="lazy"
+            />
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="#">My profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
+  </nav>
   );
 }
 

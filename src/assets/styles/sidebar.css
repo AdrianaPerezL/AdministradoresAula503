@@ -45,6 +45,8 @@
     background: #EDECEC;
     color: #572AB0;
     transition: all 0.5s;
+    list-style: none;
+    text-decoration: none;
 }
 
 .active{
