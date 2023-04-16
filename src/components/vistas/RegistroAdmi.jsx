@@ -224,7 +224,7 @@ return errors;
                 
                   <div className="input-box">
                     <span className="details">Nombre</span>
-                    <input type="number" placeholder="Ingresa tu Nombre" name='Nombre' value={formulario.NIE} onChange={ManejarEventoDeInputs}/>
+                    <input type="text" placeholder="Ingresa tu Nombre" name='Nombre' value={formulario.NIE} onChange={ManejarEventoDeInputs}/>
                   {
                     alerta.filter(input => input.valorInput == "Nombre" && input.estado === true).map(message => (
                       <div>
@@ -246,7 +246,7 @@ return errors;
                   </div>
                   <div className="input-box">
                     <span className="details">Correo</span>
-                    <input type="number" placeholder="Ingresa tu Correo" name='Correo' value={formulario.telefono} onChange={ManejarEventoDeInputs}/>
+                    <input type="email" placeholder="Ingresa tu Correo" name='Correo' value={formulario.telefono} onChange={ManejarEventoDeInputs}/>
                     {
                     alerta.filter(input => input.valorInput == "Correo" && input.estado === true).map(message => (
                       <div>
@@ -259,7 +259,7 @@ return errors;
                  
                   <div className="input-box">
                     <span className="details">Contraseña</span>
-                    <input type="text" placeholder="Ingresa tu Contraseña" name='Contraseña' value={formulario.direccion} onChange={ManejarEventoDeInputs}/>
+                    <input type="password" placeholder="Ingresa tu Contraseña" name='Contraseña' value={formulario.direccion} onChange={ManejarEventoDeInputs}/>
                     {
                     alerta.filter(input => input.valorInput == "Contraseña" && input.estado === true).map(message => (
                       <div>
