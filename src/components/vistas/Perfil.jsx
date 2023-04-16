@@ -163,9 +163,8 @@ export const Perfil = () => {
                 <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="" className="rounded-circle" width={150} />
                 <div className="mt-3">
                   <h4>Adriana Pérez</h4>
-                  <p className="text-secondary mb-1">Estudiante</p>
-                  <p className="text-muted font-size-sm">1° año</p>
-                  <button className="btn btn-edit" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                  <p className="text-secondary">Rol</p>
+                  <button className="btn btn-edit" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button>
                 </div>
               </div>
             </div>
@@ -236,7 +235,7 @@ export const Perfil = () => {
 
 
         <div className="col-md-8">
-          <div className="card mb-3">
+          <div className="cardPerfil mb-3">
             <div className="card-body">
               <div className="row">
                 <div className="col-sm-3">
@@ -247,18 +246,16 @@ export const Perfil = () => {
                 </div>
               </div>
               
-              <hr />
-              <div className="row">
+              <div className="row mt-4">
                 <div className="col-sm-3">
-                  <h6 className="mb-0">NIE</h6>
+                  <h6 className="mb-0">Carné</h6>
                 </div>
                 <div className="col-sm-9 text-secondary">
                   0123456789
                 </div>
               </div>
               
-              <hr />
-              <div className="row">
+              <div className="row mt-4">
                 <div className="col-sm-3">
                   <h6 className="mb-0">Correo</h6>
                 </div>
@@ -266,8 +263,7 @@ export const Perfil = () => {
                   a@gmail.com
                 </div>
               </div>
-              <hr />
-              <div className="row">
+              <div className="row mt-4">
                 <div className="col-sm-3">
                   <h6 className="mb-0">Fecha de nacimiento</h6>
                 </div>
@@ -275,8 +271,7 @@ export const Perfil = () => {
                   1 enero 2000
                 </div>
               </div>
-              <hr />
-              <div className="row">
+              <div className="row mt-4">
                 <div className="col-sm-3">
                   <h6 className="mb-0">Institución</h6>
                 </div>
@@ -284,9 +279,7 @@ export const Perfil = () => {
                   Centro Escolar ...
                 </div>
               </div>
-              <hr />
-             
-              <div className="row">
+              <div className="row mt-4">
                 <div className="col-sm-12">
                 </div>
               </div>
