@@ -1,0 +1,31 @@
+h4{
+    padding: 20px;
+    text-align: center;
+}
+
+#select{
+    margin-left: 20%;
+    margin-right: 5%;
+
+}
+
+#ancho{
+    width: 90%;
+    align-items: center;
+}
+
+#tabla{
+    width: 100%;
+}
+
+th{
+    text-align: center;
+}
+
+tr{
+    text-align: center;
+}
+
+imagen{
+    align-items: center;
+}

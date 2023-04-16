@@ -1,0 +1,63 @@
+.containerSidebar{
+    display: flex;
+}
+
+.mainChildren{
+    width: 100%;
+}
+
+.sidebar{
+    background: #572AB0;
+    color: #fff;
+    height: 100vh;
+    width: 300px;
+    transition: all 0.5s;
+}
+
+.top-section{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50%;
+}
+
+.link{
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+.link:hover{
+    background: #EDECEC;
+    color: #572AB0;
+    transition: all 0.5s;
+}
+
+.active{
+    background: #EDECEC;
+    color: #572AB0;
+}
+
+.icon {
+    font-size: 20px;
+
+}
+
+.link-text{
+    font-size: 16px;
+
+}
