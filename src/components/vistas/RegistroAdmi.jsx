@@ -1,11 +1,16 @@
 import React from 'react'
 import '../../assets/styles/RegistroAdmi.css'
 import Fondo from "../../assets/img/Fondo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 
 
 export const Registro = () => {
+
+  useEffect(() => {
+    document.title = "Registro | Administrador"
+  }, []);
+
 
           //estado inicial de formulario
           const datosFormularios = {

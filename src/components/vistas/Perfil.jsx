@@ -2,10 +2,15 @@ import React from 'react'
 import '../../assets/styles/perfil.css'
 import Navbar from './Navbar'
 import Sidebar from '../Sidebar'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 export const Perfil = () => {
+
+  useEffect(() => {
+    document.title = "Editar Perfil"
+  }, []);
+
     const editPerfil = {
         fechaNacimiento: "",
         foto: "",
@@ -157,7 +162,7 @@ export const Perfil = () => {
    
       <div className="row gutters-sm">
         <div className="col-md-4 mb-3">
-          <div className="card">
+          <div className="cardPerfil">
             <div className="card-body">
               <div className="d-flex flex-column align-items-center text-center">
                 <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="" className="rounded-circle" width={150} />

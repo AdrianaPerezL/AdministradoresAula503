@@ -2,8 +2,13 @@ import React from 'react'
 import Navbar from './Navbar'
 import '../../assets/styles/Estudiantes.css'
 import Sidebar from '../Sidebar'
+import { useEffect } from 'react'
 
 const Estudiantes = () => {
+  useEffect(() => {
+    document.title = "Administrador | Estudiantes"
+  }, []);
+
   return (
     <>
   <Sidebar>

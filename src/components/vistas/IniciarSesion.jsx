@@ -1,11 +1,16 @@
 import React from "react";
 import "../../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../../assets/img/Fondo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 
 
 function IniciarSesion (){
+
+  useEffect(() => {
+    document.title = "Log In | Administrador"
+  }, []);
+
        //estado inicial de formulario
  const datosFormularios = {
 

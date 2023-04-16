@@ -4,8 +4,13 @@ import { faBars, faUsers, faChalkboardUser, faSchool } from '@fortawesome/free-s
 import '../../assets/styles/dashboard.css'
 import Navbar from './Navbar'
 import Sidebar from '../Sidebar'
+import { useEffect } from 'react'
 
 const Dashboard = () => {
+    useEffect(() => {
+        document.title = "Administrador | Dashboard"
+      }, []);
+    
   return (
     <>
     <Sidebar>
