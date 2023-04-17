@@ -27,8 +27,25 @@ const Estudiantes = () => {
             <option value="2">Municipio</option>
             <option value="3">NIE</option>
           </select>
+      <h4 class="headingChart">Perfiles registrados</h4>
+      <div className="container-fluid">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Buscar estudiante"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-buscarEstudiante"
+              type="button"
+              id="button-addon2"
+            >
+              Button
+            </button>
+          </div>
         </div>
-      </div>
 
       <div class="container" id="ancho">
         <div class="row">

@@ -7,8 +7,8 @@ import Cuestionarios from '../vistas/Cuestionarios';
 import Estudiantes from '../vistas/Estudiantes';
 import Materias from '../vistas/Materias';
 import IniciarSesion from '../vistas/IniciarSesion';
-import Registro from '../vistas/RegistroAdmi';
 import Perfil from '../vistas/Perfil';
+import AgregarQuiz from "../AgregarQuiz";
 
 const Rutas = () => {
   return (
@@ -16,7 +16,6 @@ const Rutas = () => {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<IniciarSesion/>}></Route>
-      <Route path='/registro' element={<Registro/>}></Route>
     </Routes>
  
     <Routes>
@@ -25,6 +24,7 @@ const Rutas = () => {
       <Route path="/estudiantes" element={<Estudiantes/>}/>
       <Route path="/materias" element={<Materias/>}/>
       <Route path="/perfil" element={<Perfil/>}/>
+      <Route path="/agregarquiz" element={<AgregarQuiz/>}/>
     </Routes>
  
     </BrowserRouter>

@@ -34,3 +34,17 @@ tr{
 imagen{
     align-items: center;
 }
+
+.btn-buscarEstudiante{
+    background-color: #572ab0;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    color: #fff;
+}
+
+.btn-buscarEstudiante:hover{
+    background-color: #0ad5bd;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    color: #000000;
+}
