@@ -8,8 +8,8 @@ function AgregarQuiz (){
 
    return (
     <div>
-     Preguntas: 
-    
+     Agregar preguntas: 
+
      {
         preguntas.map ((item) => {
             return <input value={item} />
