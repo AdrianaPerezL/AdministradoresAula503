@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import '../assets/styles/AgregarQuiz.css'
-import { button } from "bootstrap";
+
 
 function AgregarQuiz (){
     const [preguntas, setPreguntas] = useState ([""])
@@ -17,8 +17,21 @@ function AgregarQuiz (){
         Agregar Respuestas: 
       </button>
      {
-        preguntas.map ((item) => {
-            return <input value={item}/>
+        preguntas.map ((item, index) => {
+            return <div style={{display:"flex"}}> 
+             <input value={item}/>
+             <button
+             onClick={() => {
+            const newarr = preguntas.filter((i, j) => {
+                return index !== j
+            }) 
+            console.log(newarr)
+              setPreguntas (newarr)
+              }}> 
+              Borrar </button>
+             
+            </div>
+           
             })
      }
     </div>
