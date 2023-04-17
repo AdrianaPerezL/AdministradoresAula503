@@ -1,17 +1,22 @@
-h4{
-    padding: 20px;
+.titprin{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #716E6E;
     text-align: center;
+    padding-bottom: 2%;   
 }
 
 #select{
-    margin-left: 20%;
-    margin-right: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
 
 }
 
 #ancho{
-    width: 90%;
+    width: 70%;
     align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #tabla{
