@@ -3,6 +3,7 @@ import Sidebar from '../Sidebar'
 import Navbar from './Navbar'
 import { useEffect } from 'react'
 
+
 const Cuestionarios = () => {
   useEffect(() => {
     document.title = "Administrador | Cuestionarios"
