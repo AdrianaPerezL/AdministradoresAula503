@@ -1,7 +1,5 @@
 import React from "react";
 import {useState} from "react";
-import Sidebar from "./Sidebar";
-import Navbar from "./vistas/Navbar";
 import '../assets/styles/AgregarQuiz.css'
 
 
@@ -10,8 +8,6 @@ function AgregarQuiz (){
 
    return (
     <div>
-     <Sidebar/>
-     <Navbar/>
      Preguntas:
      <button
         onClick={() => {
