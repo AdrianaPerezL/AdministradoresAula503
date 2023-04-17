@@ -9,7 +9,6 @@ function AgregarQuiz (){
 
    return (
     <div>
-     
      Preguntas:
      <button
         onClick={() => {
