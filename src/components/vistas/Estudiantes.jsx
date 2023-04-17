@@ -16,17 +16,7 @@ const Estudiantes = () => {
   <Sidebar>
     <Navbar/>
       <h1 class="titprin">Perfiles Registrados</h1>
-      <div id="select">
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupSelect01" >
-            Filtrar por
-          </label>
-          <select class="form-select" id="inputGroupSelect01">
-            <option selected>Buscar</option>
-            <option value="1">Departamento</option>
-            <option value="2">Municipio</option>
-            <option value="3">NIE</option>
-          </select>
+    
       <h4 class="headingChart">Perfiles registrados</h4>
       <div className="container-fluid">
           <div class="input-group mb-3">
@@ -161,7 +151,10 @@ const Estudiantes = () => {
         
           </div>
         </div>
-      </div>
+        </div>
+        
+     
+    
     </>
   )
 }
