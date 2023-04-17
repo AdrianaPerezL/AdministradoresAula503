@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Sidebar from "../Sidebar";
 import { useEffect, useState } from "react";
-import "../../assets/styles/Materias.css";
+import "../../assets/styles/materias.css";
 
 const Materias = () => {
   useEffect(() => {
