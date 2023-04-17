@@ -2,7 +2,6 @@ import React from "react";
 import "../../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../../assets/img/Fondo.png";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
 import logo from "../../assets/img/logo1.png"
 
 
@@ -195,7 +194,6 @@ return (
                   <a href="#" style={{color: "#fff"}}>Entrar</a>
                 </button>
               </div>
-              <p className="text-center mt-1 pregunta">¿No tienes una cuenta? <Link to="/registro" className="text-purple">Registrate</Link></p>
 
               <div role="alert" id="alerta"></div>
             </form>
