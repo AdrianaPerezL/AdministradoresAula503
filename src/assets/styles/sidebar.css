@@ -14,6 +14,16 @@
     transition: all 0.5s;
 }
 
+@media screen and (max-width: 576px) {
+    .sidebar{
+        background: #572AB0;
+        color: #fff;
+        width: 300px;
+        height: auto;
+        transition: all 0.5s;
+    }
+}
+
 .top-section{
     display: flex;
     align-items: center;
