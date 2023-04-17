@@ -2,13 +2,111 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Sidebar from "../Sidebar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../../assets/styles/Materias.css";
 
 const Materias = () => {
   useEffect(() => {
     document.title = "Administrador | Materias";
   }, []);
+
+  const agregarMateria = {
+    nombreMateria: "",
+    gradoMateria: "",
+    
+  }
+
+  const initialStateInput = {
+    input: "",
+    message: '',
+    state: false
+  }
+
+  const [editar, setEditar] = useState(agregarMateria);
+  const [alerta, setAlerta] = useState([initialStateInput]);
+
+  const ManejarEventoDeInputs = (e) =>{
+    //la propiedad target del event nos permitirá obtener los valores
+    const name = e.target.name;
+    const value = e.target.value;
+
+  //actualizamos los valores capturados a nuestro estado de formulario
+  setEditar({...editar, [name]: value});
+}
+
+const handleEditSession = (e) =>{
+  e.preventDefault();
+
+  let verificarInputs = [
+    {nombre: "nombreMateria", value: editar.nombreMateria},
+    {nombre: "gradoMateria", value: editar.gradoMateria},
+  ];
+
+  const datosValidados = ValidarInputs(verificarInputs)
+
+  setAlerta(datosValidados);
+
+  const totalValidaciones = datosValidados.filter(input => input.estado === false).map
+  ((estado) => {return false});
+
+  if(totalValidaciones.length >=1){
+    console.log("Enviar al servidor");
+  }
+ };
+
+ const ValidarInputs = (data) =>{
+  console.log(data);
+
+  let errors = [];
+
+  const datosDelFormulario = data;
+
+  datosDelFormulario.map((valorInput) =>{
+    switch(valorInput.nombre){
+      case 'nombreMateria': {
+        if(valorInput.value === '' || valorInput.value === null){
+  
+          errors.push({
+            valorInput: valorInput.nombre,
+            mensaje: '*Campo requerido',
+            estado: true
+          });
+        }else{
+          errors.push({
+            valorInput: valorInput.nombre,
+            mensaje: '',
+            estado: false
+          })
+        }
+  
+        break;
+      }
+      case 'gradoMateria': {
+        if(valorInput.value === '' || valorInput.value === null){
+  
+          errors.push({
+            valorInput: valorInput.nombre,
+            mensaje: '*Campo requerido',
+            estado: true
+          });
+        }else{
+          errors.push({
+            valorInput: valorInput.nombre,
+            mensaje: '',
+            estado: false
+          })
+        }
+  
+        break;
+      }
+
+      default: {
+        break;
+      }
+    }
+    })
+return errors;
+ }
 
   return (
     <>
@@ -30,6 +128,7 @@ const Materias = () => {
                 <th>Icono</th> {/* 3 */}
                 <th>Grado</th> {/* 4*/}
                 <th>Cuestionarios</th> {/* 5 */}
+                <th>Actions</th> {/* 5 */}
               </tr>
             </thead>
 
@@ -65,49 +164,113 @@ const Materias = () => {
                   <p class="fw-normal mb-1">XX</p>
                 </td>
 
+                <td>
+                    <lord-icon
+                      src="https://cdn.lordicon.com/jmkrnisz.json"
+                      trigger="hover"
+                      colors="primary:#0ad5bd"
+                      style={{ width: "50px", height: "50px" }}
+                      
+                    ></lord-icon>
+                    <lord-icon
+                      src="https://cdn.lordicon.com/hkkhwztk.json"
+                      trigger="hover"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                      colors="primary:#0ad5bd"
+                      /* ALERTAAAAAAA */
+                      style={{ width: "50px", height: "50px" }}
+                    ></lord-icon>
+                  </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </Sidebar>
-
+{/* Modal1 */}
     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form onSubmit={handleEditSession}>
         <div class="modal-dialog">
+          
           <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title agregar" id="exampleModalLabel">Agregar Estudiante</h5>
+                <h5 class="modal-title agregar" id="exampleModalLabel">Agregar Materia</h5>
 
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-outline">
-                    <label class="form-label" for="typeText">NIE</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="NIE"  />
-                    <label class="form-label" for="typeText">Nombre</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Nombre" />
-                    <label class="form-label" for="typeText">Apellidos</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Apellidos" />
-                    <label class="form-label" for="typeText">Edad</label>
-                    <input type="number" id="typeText" class="form-control mb-3" placeholder="Edad" />
-                    <label class="form-label" for="typeText">Correo</label>
-                    <input type="email" id="typeText" class="form-control mb-3" placeholder="Correo" />
-                    <label class="form-label" for="typeText">Foto</label>
-                    <div class="input-group">
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="foto" aria-label="Upload"/>
+                   
+                    <label class="form-label" for="typeText">Nombre de la materia</label>
+                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Nombre de la materia" name="nombreMateria" onChange={ManejarEventoDeInputs} value={editar.nombreMateria}/>
+                    {
+                    alerta.filter(input => input.valorInput == "nombreMateria" && input.estado === true).map(message => (
+                      <div>
+                        <span className='text-danger'>{message.mensaje}</span>
                       </div>
-                      <label class="form-label" for="typeText">Centro Educativo</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Centro Educativo" />
-
+                    ))
+                  }
+                    <label class="form-label" for="typeText">Grado</label>
+                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Grado" name="gradoMateria" onChange={ManejarEventoDeInputs} value={editar.gradoMateria}/>
+                    {
+                    alerta.filter(input => input.valorInput == "gradoMateria" && input.estado === true).map(message => (
+                      <div>
+                        <span className='text-danger'>{message.mensaje}</span>
+                      </div>
+                    ))
+                  }
                   </div>
             </div>
              
-              <button type="button" class="btn-add m-4">Agregar</button>
+              <button type="submit" class="btn-add m-4">Agregar</button>
         
           </div>
         </div>
+        </form>
       </div>
 
+
+{/* Modal2 */}
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form onSubmit={handleEditSession}>
+        <div class="modal-dialog">
+          
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title agregar" id="exampleModalLabel">Editar Materia</h5>
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-outline">
+                   
+                    <label class="form-label" for="typeText">Nombre de la materia</label>
+                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Nombre de la materia" name="nombreMateria" onChange={ManejarEventoDeInputs} value={editar.nombreMateria}/>
+                    {
+                    alerta.filter(input => input.valorInput == "nombreMateria" && input.estado === true).map(message => (
+                      <div>
+                        <span className='text-danger'>{message.mensaje}</span>
+                      </div>
+                    ))
+                  }
+                    <label class="form-label" for="typeText">Grado</label>
+                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Grado" name="gradoMateria" onChange={ManejarEventoDeInputs} value={editar.gradoMateria}/>
+                    {
+                    alerta.filter(input => input.valorInput == "gradoMateria" && input.estado === true).map(message => (
+                      <div>
+                        <span className='text-danger'>{message.mensaje}</span>
+                      </div>
+                    ))
+                  }
+                  </div>
+            </div>
+             
+              <button type="submit" class="btn-add m-4">Agregar</button>
+        
+          </div>
+        </div>
+        </form>
+      </div>
     </>
   );
 };
