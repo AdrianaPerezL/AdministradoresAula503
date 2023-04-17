@@ -1,8 +1,3 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Sidebar from '../Sidebar'
-import { useEffect } from 'react'
-import '../../assets/styles/Materias.css'
 
 import React from "react";
 import Navbar from "./Navbar";
@@ -112,14 +107,7 @@ const Materias = () => {
           </div>
         </div>
       </div>
-   
 
-      
-
-      <Sidebar>
-        <Navbar />
-       
-      </Sidebar>
     </>
   );
 };
