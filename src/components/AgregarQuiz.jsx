@@ -1,42 +1,31 @@
 import React from "react";
-import {useState} from "react";
 import '../assets/styles/AgregarQuiz.css'
 
 
-function AgregarQuiz (){
-    const [preguntas, setPreguntas] = useState ([""])
+const AgregarQuiz = ({ questions, currentQuestion, handleAnswerClick }) => {
+  return (
+    <>
+      <div className="question">
+        <div className="question-number">
+          <span>
+            Pregunta  {currentQuestion + 1} / {questions.length}
+          </span>
+        </div>
+        <div className="question-text">
+          {questions[currentQuestion].question}
+        </div>
+      </div>
 
-   return (
-    <div>
-     Preguntas:
-     <button
-        onClick={() => {
-          setPreguntas([...preguntas, ''])
-        }}
-      >
-        Agregar Respuestas: 
-      </button>
-     {
-        preguntas.map ((item, index) => {
-            return <div style={{display:"flex"}}> 
-             <input value={item}/>
-             <button
-             onClick={() => {
-            const newarr = preguntas.filter((i, j) => {
-                return index !== j
-            }) 
-            console.log(newarr)
-              setPreguntas (newarr)
-              }}> 
-              Borrar </button>
-             
-            </div>
-           
-            })
-     }
-    </div>
-   );
+      <div className="answer">
+        {questions[currentQuestion].answers.map(({ text, isCorrect }) => (
+          <button key={text} onClick={() => handleAnswerClick(isCorrect)}>
+            {text}
+          </button>
+        ))}
+      </div>
+    </>
+  );
+};
 
- 
-   }
 export default AgregarQuiz;
+
