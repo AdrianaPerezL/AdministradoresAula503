@@ -5,6 +5,7 @@ import '../../assets/styles/dashboard.css'
 import Navbar from './Navbar'
 import Sidebar from '../Sidebar'
 import { useEffect } from 'react'
+import Grafica from '../../assets/graficas/Grafica'
 
 const Dashboard = () => {
     useEffect(() => {
@@ -52,7 +53,7 @@ const Dashboard = () => {
                         {/* Gráfico */}
                     <h4 class="headingChart">Perfiles registrados</h4>
                 <div class="container">
-                        <canvas id="lineChart" class="chart"></canvas>
+                   <Grafica/>
                 </div>
                 </div>   
                 
