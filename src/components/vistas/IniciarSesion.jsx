@@ -3,6 +3,9 @@ import "../../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../../assets/img/Fondo.png";
 import { useState, useEffect } from "react";
 import logo from "../../assets/img/logo1.png"
+import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 
 function IniciarSesion (){
@@ -10,6 +13,13 @@ function IniciarSesion (){
   useEffect(() => {
     document.title = "Log In | Administrador"
   }, []);
+
+     //Mostrar contraseña
+     const [show, setShow] = useState(false);
+     const switchShow = () => setShow(!show);
+   
+     const [password, setPassword] = useState("");
+     const onChange = ({ currentTarget }) => setPassword(currentTarget.value);
 
        //estado inicial de formulario
  const datosFormularios = {
@@ -171,9 +181,10 @@ return (
                   ))
                 }
                 <label className="mt-4">Contraseña</label>
+                <div className="d-flex">
                 <input
                   className="w-100 mt-2 mb-2 form-control"
-                  type="password"
+                  type={show ? "text" : "password"}
                   placeholder="Escribe tu Contraseña"
                   id="inputEmail"
                   aria-describedby="inputGroup-sizing-default"
@@ -181,6 +192,14 @@ return (
                   value={formulario.Contraseña}
                   onChange={ManejarEventoDeInputs}
                 />
+                 <FontAwesomeIcon
+                    className="fs-5 mt-3"
+                      icon={faEye}
+                      onClick={switchShow}
+                      {...(show ? "Ocultar" : "Mostrar")}
+                      style={{ color: "#e855be" }}
+                    />
+                </div>
                 {
                   alerta.filter(input => input.valorInput == "Contraseña" && input.estado === true).map(message => (
                     <div>
@@ -191,7 +210,7 @@ return (
               </div>
               <div className="botondiv w-100">
                 <button className="mt-2 btn-login w-100" type="submit">
-                  <a href="#" style={{color: "#fff"}}>Entrar</a>
+                  Entrar
                 </button>
               </div>
 

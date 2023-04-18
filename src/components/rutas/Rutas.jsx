@@ -9,6 +9,7 @@ import Materias from '../vistas/Materias';
 import IniciarSesion from '../vistas/IniciarSesion';
 import Perfil from '../vistas/Perfil';
 import AgregarQuiz from "../AgregarQuiz";
+import Example from '../vistas/Example';
 
 const Rutas = () => {
   return (
@@ -25,6 +26,7 @@ const Rutas = () => {
       <Route path="/materias" element={<Materias/>}/>
       <Route path="/perfil" element={<Perfil/>}/>
       <Route path="/agregarquiz" element={<AgregarQuiz/>}/>
+      <Route path="/example" element={<Example/>}/>
     </Routes>
  
     </BrowserRouter>

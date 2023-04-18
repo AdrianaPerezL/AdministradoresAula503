@@ -1,14 +1,37 @@
 
 import React from "react";
+import axios from "axios";
 import Navbar from "./Navbar";
 import Sidebar from "../Sidebar";
 import { useEffect, useState } from "react";
-import "../../assets/styles/materias.css";
+import "../../assets/styles/Materias.css";
 
 const Materias = () => {
   useEffect(() => {
     document.title = "Administrador | Materias";
   }, []);
+
+
+  useEffect(() => {
+    async function getInfo() {
+        const url = "http://localhost:8000/api/";
+
+        let config = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json' 
+            }
+    };
+
+    try {
+        const resp = await axios.get(url, config);
+        console.log(resp.data);
+    } catch(err){
+        console.error(err);
+    }
+};
+getInfo();
+}, []);
 
   const agregarMateria = {
     nombreMateria: "",

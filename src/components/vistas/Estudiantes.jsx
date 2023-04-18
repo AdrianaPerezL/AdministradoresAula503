@@ -3,6 +3,8 @@ import Navbar from './Navbar'
 import '../../assets/styles/Estudiantes.css'
 import Sidebar from '../Sidebar'
 import { useEffect } from 'react'
+import axios from "axios";
+
 /* import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content' */
 
@@ -10,6 +12,27 @@ const Estudiantes = () => {
   useEffect(() => {
     document.title = "Administrador | Estudiantes"
   }, []);
+
+  useEffect(() => {
+    async function getInfo() {
+        const url = "http://localhost:3306/api/create/subject";
+
+        let config = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json' 
+            }
+    };
+
+    try {
+        const resp = await axios.get(url, config);
+        console.log(resp.data);
+    } catch(err){
+        console.error(err);
+    }
+};
+getInfo();
+}, []);
 
   return (
     <>

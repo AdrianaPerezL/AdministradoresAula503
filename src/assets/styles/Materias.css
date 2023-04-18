@@ -1,0 +1,14 @@
+#botonindicaciones{
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+}
+
+.btn-add{
+    background-color: #572ab0;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
