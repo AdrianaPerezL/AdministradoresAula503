@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-export const    Preguntas = () => {
+export const Preguntas = () => {
   //!VALIDACIONES DE DATOS
   //Navegacion del boton luego de validar correctamente
 const Navigate = useNavigate();
