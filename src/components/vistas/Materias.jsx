@@ -1,10 +1,10 @@
-
+import Swal from 'sweetalert2'
 import React from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import Sidebar from "../Sidebar";
 import { useEffect, useState } from "react";
-import "../../assets/styles/materias.css";
+import "../../assets/styles/Materias.css";
 
 const Materias = () => {
 
@@ -50,7 +50,13 @@ function addSubject() {
 
 axios.post(url, editar, config)
 .then(response => console.log(response.data,"Response-----------------------"))
-
+  setEditar(agregarMateria) 
+  Swal.fire({
+    icon: 'success',
+    title: 'Materia agregada',
+    showConfirmButton: false,
+    timer: 1500
+  })
 // const UpdateData = {
 //   nombre_materia: editar.nombre_materia,
 //   grado: editar.gradoMateria,
@@ -68,8 +74,8 @@ const handleEditSession = (e) =>{
   e.preventDefault();
 
   let verificarInputs = [
-    {nombre: "nombreMateria", value: editar.nombreMateria},
-    {nombre: "gradoMateria", value: editar.gradoMateria},
+    {nombre: "nombre_materia", value: editar.nombre_materia},
+    {nombre: "grado", value: editar.grado},
   ];
 
   const datosValidados = ValidarInputs(verificarInputs)
@@ -98,7 +104,7 @@ const handleEditSession = (e) =>{
 
   datosDelFormulario.map((valorInput) =>{
     switch(valorInput.nombre){
-      case 'nombreMateria': {
+      case 'nombre_materia': {
         if(valorInput.value === '' || valorInput.value === null){
   
           errors.push({
