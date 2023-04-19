@@ -320,26 +320,7 @@ const Navigate = useNavigate();
                 htmlFor="puntuacion"
                 className="block text-sm font-medium text-white dark:text-white mb-1"
               >
-                Puntuación
               </label>
-              <input
-                type="number"
-                id="puntuacion"
-                name="puntuacion"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                value={formulario.puntuacion}
-                onChange={ManejarEventoDeInputs}
-              />
-              {alerta
-                .filter(
-                  (input) =>
-                    input.valorInput === "puntuacion" && input.estado === true
-                )
-                .map((message) => (
-                  <div className="py-2">
-                    <span className="text-red-500 mt-2">{message.mensaje}</span>
-                  </div>
-                ))}
             </div>
 
             {/*AREA DE RESPUESTAS */}
@@ -437,35 +418,7 @@ const Navigate = useNavigate();
                   ))}
               </div>
 
-              {/*Respuesta 4*/}
-              <div className="mb-6 w-full">
-                <label
-                  htmlFor="respuesta4"
-                  className="block text-sm font-medium text-white dark:text-white mb-1"
-                >
-                  Respuesta 4
-                </label>
-                <input
-                  type="text"
-                  id="respuesta4"
-                  name="respuesta4"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  value={formulario.respuesta4}
-                  onChange={ManejarEventoDeInputs}
-                />
-                {alerta
-                  .filter(
-                    (input) =>
-                      input.valorInput === "respuesta4" && input.estado === true
-                  )
-                  .map((message) => (
-                    <div className="py-2">
-                      <span className="text-red-500 mt-2">
-                        {message.mensaje}
-                      </span>
-                    </div>
-                  ))}
-              </div>
+              
             </div>
 
             {/*Selecionar respuesta correcta*/}
@@ -520,14 +473,6 @@ const Navigate = useNavigate();
                 {/*Checkbox 4*/}
                 <div className="w-full p-1 pt-4">
                   <div className="">
-                    <input
-                      type="radio"
-                      className="w-4 h-4 text-black bg-gray-300 border-gray-300 rounded focus:ring-black dark:focus:ring-black dark:ring-offset-black focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                      name="respcorrecta"
-                      id="respcorrecta4"
-                      onChange={ManejarEventoDeInputs}
-                    />{" "}
-                    <span className="px-2">Respuesta 4</span>
                   </div>
                 </div>
               </div>
