@@ -29,6 +29,7 @@ const Rutas = () => {
       <Route path="/agregarquiz" element={<AgregarQuiz/>}/>
       <Route path="/example" element={<Example/>}/>
       
+   
     </Routes>
  
     </BrowserRouter>

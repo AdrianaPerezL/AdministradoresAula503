@@ -5,7 +5,7 @@ import { useState } from "react";
 import "../assets/styles/AgregarQuiz.css"
 import Fondo from "../assets/img/Fondo.png";
 
-const CrearCuestionario = () => {
+const AgregarQuiz = () => {
   //!VALIDACIONES DE DATOS
   //Navegacion del boton luego de validar correctamente
   const Navigate = useNavigate ();
@@ -388,4 +388,4 @@ const CrearCuestionario = () => {
   );
 };
 
-export default CrearCuestionario;
+export default AgregarQuiz;
