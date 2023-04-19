@@ -1,65 +1,62 @@
-import React from 'react'
-import { Line } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2';
 import {
-    Chart as ChartJS,
-    LineElement,
-    CategoryScale,
-    LinearScale,
-    PointElement
-} from 'chart.js'
-
-ChartJS.register(
-    LineElement,
-    CategoryScale,
-    LinearScale,
-    PointElement
-)
-
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
 
 const Grafica = () => {
-    const data = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [{
-          label: "Femenino",
-          
-          data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: [
-            'rgba(105, 0, 132, .2)',
-          ],
-          borderColor: [
-            'rgba(200, 99, 132, .7)',
-          ],
-          borderWidth: 2,
-          fontFamily: 'Poppins',
-        },
-        {
-          label: "Masculino",
-          data: [28, 48, 40, 19, 86, 27, 90],
-          backgroundColor: [
-            'rgba(0, 137, 132, .2)',
-          ],
-          borderColor: [
-            'rgba(0, 10, 130, .7)',
-          ],
-          borderWidth: 2
-        }
-        ]
 
-    }
+  const options = {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+      },
+    },
+  };
 
-    const options = {
-    fill: true,
-    }
+  const labels = ['January', 'February', 'March', 'April'];
 
-    
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Femenino',
+        data: [4,5,1,8],
+        borderColor: 'rgb(232, 85, 190)',
+        backgroundColor: 'rgb(232, 85, 190)',
+      },
+      {
+        label: 'Masculino',
+        data: [3,2,1,1],
+        borderColor: 'rgb(87, 42, 176)',
+        backgroundColor: 'rgb(87, 42, 176)',
+      },
+    ],
+  };
+
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+
   return(
     <>
     <Line
-    data={data}
-    options={options}
-    >
-
-    </Line>
+      options={options}
+      data={data}
+    />
     </>
   );
 }

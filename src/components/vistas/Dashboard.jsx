@@ -52,7 +52,7 @@ const Dashboard = () => {
 
                         {/* Gráfico */}
                     <h4 class="headingChart">Perfiles registrados</h4>
-                <div class="container">
+                <div class="container bg-white">
                    <Grafica/>
                 </div>
                 </div>   

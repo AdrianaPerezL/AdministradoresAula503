@@ -4,34 +4,39 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import Sidebar from "../Sidebar";
 import { useEffect, useState } from "react";
-import "../../assets/styles/materias.css";
+import "../../assets/styles/Materias.css";
 
 const Materias = () => {
+
+  const [datosServidor, setDatosServidor] =  useState([]);
+
   useEffect(() => {
     document.title = "Administrador | Materias";
-  }, []);
 
+    async function addSubject() {
+      const url = "http://127.0.0.1:8000/api/create/subject";
 
-  useEffect(() => {
-    async function getInfo() {
-        const url = "http://localhost:8000/api/";
+      let config = {
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json' 
+          }
+  };
 
-        let config = {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json' 
-            }
-    };
-
-    try {
-        const resp = await axios.get(url, config);
-        console.log(resp.data);
-    } catch(err){
-        console.error(err);
-    }
+  const UpdateData = {
+    nombre_materia: editar.nombreMateria,
+    grado: editar.gradoMateria,
+  }
+  
+  try {
+      const resp = await axios.get(url, UpdateData, config);
+      console.log(resp.data,"--------------------");
+  } catch(err){
+      console.error(err);
+  }
 };
-getInfo();
-}, []);
+addSubject();
+  }, []);
 
   const agregarMateria = {
     nombreMateria: "",
@@ -72,10 +77,14 @@ const handleEditSession = (e) =>{
   const totalValidaciones = datosValidados.filter(input => input.estado === false).map
   ((estado) => {return false});
 
-  if(totalValidaciones.length >=1){
+  if(totalValidaciones.length >=2){
     console.log("Enviar al servidor");
   }
  };
+
+ 
+  
+
 
  const ValidarInputs = (data) =>{
   console.log(data);
@@ -160,7 +169,7 @@ return errors;
                 <td>1</td>  {/* 1 */}
 
                 <td>
-                <p>Biologia</p> {/* 2 */}
+                <p>{}</p> {/* 2 */}
                 </td>
 
                 <td>  {/* 3 */}
@@ -205,12 +214,14 @@ return errors;
                     ></lord-icon>
                   </td>
               </tr>
-            </tbody>
+            
+          
+         </tbody>
           </table>
         </div>
       </div>
     </Sidebar>
-{/* Modal1 */}
+{/* Modal1 agregar materias */}
     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <form onSubmit={handleEditSession}>
         <div class="modal-dialog">
