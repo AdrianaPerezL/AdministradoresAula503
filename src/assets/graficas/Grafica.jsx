@@ -48,7 +48,6 @@ const Grafica = () => {
     }
 
     const options = {
-    responsive: true,
     fill: true,
     }
 

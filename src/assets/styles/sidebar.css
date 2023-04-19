@@ -9,20 +9,39 @@
 .sidebar{
     background: #572AB0;
     color: #fff;
-    height: 100vh;
+    height: 100;
     width: 300px;
     transition: all 0.5s;
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px ) and (min-width: 100px ) {
     .sidebar{
         background: #572AB0;
         color: #fff;
         width: 300px;
-        height: auto;
+        height: 100vh;
         transition: all 0.5s;
     }
 }
+
+@media (max-width: 767px ) and (min-width: 577px ) {
+    .sidebar{
+        background: #572AB0;
+        color: #fff;
+        width: 300px;
+        height: 100vh;
+        transition: all 0.5s;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+   .sidebar{
+    height: 100vh;
+   }
+    
+  }
 
 .top-section{
     display: flex;
