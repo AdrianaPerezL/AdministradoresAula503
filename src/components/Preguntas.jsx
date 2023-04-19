@@ -196,55 +196,8 @@ const Navigate = useNavigate();
           }
           break;
         }
-        case "respuesta4": {
-          if (valorInput.value === "" || valorInput.value === null) {
-            errors.push({
-              valorInput: valorInput.nombre,
-              mensaje: "Ingresa la respuesta",
-              estado: true,
-            });
-          } else {
-            errors.push({
-              valorInput: valorInput.nombre,
-              mensaje: "",
-              estado: false,
-            });
-          }
-          break;
-        }
-        case "puntuacion": {
-          if (valorInput.value === "" || valorInput.value === null) {
-            errors.push({
-              valorInput: valorInput.nombre,
-              mensaje: "Por favor ingrese la puntuación de esta pregunta",
-              estado: true,
-            });
-          } else {
-            var num = false;
-            for (var i = 0; i < valorInput.value.length; i++) {
-              if (
-                valorInput.value.charCodeAt(i) >= 48 &&
-                valorInput.value.charCodeAt(i) <= 57
-              ) {
-                num = true;
-              }
-            }
-            if (num === true) {
-              errors.push({
-                valorInput: valorInput.nombre,
-                mensaje: "",
-                estado: false,
-              });
-            } else {
-              errors.push({
-                valorInput: valorInput.nombre,
-                mensaje: "Ingrese un puntaje válido",
-                estado: true,
-              });
-            }
-            break;
-          }
-        }
+        
+        
       }
     });
     //retornamos el total de validaciones
@@ -298,7 +251,7 @@ const Navigate = useNavigate();
                 type="text"
                 id="pregunta"
                 name="pregunta"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="form-control"
                 value={formulario.pregunta}
                 onChange={ManejarEventoDeInputs}
               />

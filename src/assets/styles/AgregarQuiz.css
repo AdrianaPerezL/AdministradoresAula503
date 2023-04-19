@@ -21,3 +21,43 @@
     box-shadow: 18px 18px 15px -3px rgba(0,0,0,0.1);
     
   }
+
+  .btn-siguiente{
+    border-radius: 100px;
+    background-color: #572ab0;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+  }
+
+  .card-title{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+  }
+
+
+  .form-control{
+ 
+    font-family: 'Poppins';
+    border-color: #9b59b6;
+  
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .form-control:focus{
+    border-color: #9b59b6;
+    box-shadow: none;
+  }
