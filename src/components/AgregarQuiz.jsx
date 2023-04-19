@@ -179,15 +179,13 @@ const CrearCuestionario = () => {
   console.log(formulario);
   return (
     <main>
-     <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
-        backgroundSize:"cover" }}/>
-        <img src={logo} width="70px" className="m-2"/>
-        <h5 className="card-title text-center w-100"> Crear Cuestionario</h5>
-       <section className="relative overflow-x-auto shadow-md sm:rounded-lg p-12 pt-24 mx-24">
+
+      <section className="relative overflow-x-auto shadow-md sm:rounded-lg p-12 pt-24 mx-24">
         <div className="flex justify-between p-8 text-center text-3xl text-white">
           <Link to="/cuestionario" className="flex justify-start">
+          
           </Link>
-
+          <h1 className="flex justify-center">Cuestionario</h1>
           <div></div>
         </div>
         <div>
@@ -202,7 +200,7 @@ const CrearCuestionario = () => {
                   {/*<!--Nombre-->¨*/}
                   <div className="pb-2 w-full py-4">
                     <label htmlFor="nombreC" className="text-white">
-                      Nombre del Cuestionario
+                      Nombre
                     </label>
                     <input
                       type="text"
