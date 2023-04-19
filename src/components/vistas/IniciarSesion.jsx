@@ -3,9 +3,16 @@ import "../../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../../assets/img/Fondo.png";
 import { useState, useEffect } from "react";
 import logo from "../../assets/img/logo1.png"
+<<<<<<< Updated upstream
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+=======
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+
+
+>>>>>>> Stashed changes
 
 
 function IniciarSesion (){
@@ -173,6 +180,7 @@ return (
                   value={formulario.Carne}
                   onChange={ManejarEventoDeInputs}
                 />
+                
                 {
                   alerta.filter(input => input.valorInput == "Carne" && input.estado === true).map(message => (
                     <div>
@@ -180,6 +188,8 @@ return (
                     </div>
                   ))
                 }
+              
+
                 <label className="mt-4">Contraseña</label>
                 <div className="d-flex">
                 <input
@@ -192,6 +202,7 @@ return (
                   value={formulario.Contraseña}
                   onChange={ManejarEventoDeInputs}
                 />
+<<<<<<< Updated upstream
                  <FontAwesomeIcon
                     className="fs-5 mt-3"
                       icon={faEye}
@@ -200,6 +211,9 @@ return (
                       style={{ color: "#e855be" }}
                     />
                 </div>
+=======
+                
+>>>>>>> Stashed changes
                 {
                   alerta.filter(input => input.valorInput == "Contraseña" && input.estado === true).map(message => (
                     <div>
