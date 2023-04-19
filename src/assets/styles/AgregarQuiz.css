@@ -25,6 +25,7 @@
   .btn-siguiente{
     border-radius: 100px;
     background-color: #572ab0;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     border: none;
     padding-top: 10px;
@@ -60,4 +61,9 @@
   .form-control:focus{
     border-color: #9b59b6;
     box-shadow: none;
+  }
+
+  .pregunta{
+    font-family: 'Poppins', sans-serif;
+    color: black;
   }

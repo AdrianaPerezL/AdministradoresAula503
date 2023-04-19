@@ -184,7 +184,7 @@ const AgregarQuiz = () => {
         backgroundSize:"cover" }}>
      <img src={logo} width="70px" className="m-2"/>
       <section className="bodyQuiz"/>
-        <div className="card col-8 col-sm-4 col-md-4 ">
+        <div className="card">
           <div className="card-body">
             <h5 className="card-title text-center w-100">Agregar Cuestionario</h5>
         <div>
@@ -198,7 +198,7 @@ const AgregarQuiz = () => {
                 <div>
                   {/*<!--Nombre-->¨*/}
                   <div className="pb-2 w-full py-4">
-                    <label htmlFor="nombreC" className="text-black">
+                    <label htmlFor="nombreC" className="pregunta">
                       Nombre del Cuestionario: 
                     </label>
                     <input
@@ -226,7 +226,7 @@ const AgregarQuiz = () => {
 
                   {/*<!--Grado-->¨*/}
                   <div className="pb-2 w-full py-4">
-                    <label htmlFor="gradoC" className="text-black">
+                    <label htmlFor="gradoC" className="preguntak">
                       Grado:
                     </label>
                     <select
@@ -245,7 +245,7 @@ const AgregarQuiz = () => {
 
                   {/*<!--Materia-->*/}
                   <div className="pb-2 w-full py-4">
-                    <label htmlFor="materiaC" className="text-black">
+                    <label htmlFor="materiaC" className="pregunta">
                       Materia: 
                     </label>
                     <select
@@ -263,7 +263,7 @@ const AgregarQuiz = () => {
 
                   {/*<!--Tema-->*/}
                   <div className="pb-2 w-full py-4">
-                    <label htmlFor="temaC" className="text-black">
+                    <label htmlFor="temaC" className="pregunta">
                       Tema: 
                     </label>
                     <input
@@ -291,7 +291,7 @@ const AgregarQuiz = () => {
 
                   {/*<!--Descripción-->*/}
                   <div className="pb-2 w-full py-4">
-                    <label htmlFor="descripC" className="text-black">
+                    <label htmlFor="descripC" className="pregunta">
                       Descripción:
                     </label>
                     <textarea
@@ -321,7 +321,7 @@ const AgregarQuiz = () => {
 
                   {/*<!--Cantidad de preguntas-->*/}
                   <div className="pb-2 w-full py-4">
-                    <label htmlFor="cantPC" className="text-black">
+                    <label htmlFor="cantPC" className="pregunta">
                       ¿Cuántas preguntas tendrá este cuestionario?
                     </label>
                     <input
