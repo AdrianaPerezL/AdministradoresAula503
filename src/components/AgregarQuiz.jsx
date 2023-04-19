@@ -190,7 +190,7 @@ const AgregarQuiz = () => {
         <div>
           <div className="container max-w-screen-lg mx-auto">
             <div>
-              {/*<!--Contenedor verde mas oscurito-->*/}
+             
 
               {/*<!--Sección entrada de datos del cuestionario-->*/}
 
