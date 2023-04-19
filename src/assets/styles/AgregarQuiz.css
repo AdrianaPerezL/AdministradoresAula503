@@ -1,25 +1,5 @@
-.question {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.question-number {
-    font-weight: 900;
-    font-size: 16px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-.question-text {
-    font-size: 28px;
-    font-weight: lighter;
-    margin-bottom: 25px;
-    text-align: center;
-}
 
-.answer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: 15px;
-    width: 70%;
-}
+
