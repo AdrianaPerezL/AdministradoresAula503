@@ -12,35 +12,11 @@ const Materias = () => {
 
   useEffect(() => {
     document.title = "Administrador | Materias";
-
-    async function addSubject() {
-      const url = "http://127.0.0.1:8000/api/create/subject";
-
-      let config = {
-          headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json' 
-          }
-  };
-
-  const UpdateData = {
-    nombre_materia: editar.nombreMateria,
-    grado: editar.gradoMateria,
-  }
-  
-  try {
-      const resp = await axios.get(url, UpdateData, config);
-      console.log(resp.data,"--------------------");
-  } catch(err){
-      console.error(err);
-  }
-};
-addSubject();
   }, []);
 
   const agregarMateria = {
-    nombreMateria: "",
-    gradoMateria: "",
+    nombre_materia: "",
+    grado: "",
     
   }
 
@@ -62,6 +38,32 @@ addSubject();
   setEditar({...editar, [name]: value});
 }
 
+function addSubject() {
+  const url = "http://127.0.0.1:8000/api/create/subject";
+
+  let config = {
+      headers: {
+          'Content-Type': 'multipart/form-data',
+          'Accept': 'application/json' 
+      }
+}
+
+axios.post(url, editar, config)
+.then(response => console.log(response.data,"Response-----------------------"))
+
+// const UpdateData = {
+//   nombre_materia: editar.nombre_materia,
+//   grado: editar.gradoMateria,
+// }
+
+// try {
+//     const resp = await axios.get(url, UpdateData, config);
+//     console.log(resp.data,"--------------------");
+// } catch(err){
+//     console.error(err);
+// }
+};
+
 const handleEditSession = (e) =>{
   e.preventDefault();
 
@@ -79,6 +81,7 @@ const handleEditSession = (e) =>{
 
   if(totalValidaciones.length >=2){
     console.log("Enviar al servidor");
+    addSubject();
   }
  };
 
@@ -113,7 +116,7 @@ const handleEditSession = (e) =>{
   
         break;
       }
-      case 'gradoMateria': {
+      case 'grado': {
         if(valorInput.value === '' || valorInput.value === null){
   
           errors.push({
@@ -155,12 +158,12 @@ return errors;
           <table class="table mb-0 bg-white" id="tabla">
             <thead class="bg-light" id="encabezadotabla">
               <tr>
-                <th>#</th> {/* 1 */}
-                <th>Nombre</th> {/* 2 */}
-                <th>Icono</th> {/* 3 */}
-                <th>Grado</th> {/* 4*/}
-                <th>Cuestionarios</th> {/* 5 */}
-                <th>Actions</th> {/* 5 */}
+                <th className="tabla1">#</th> {/* 1 */}
+                <th className="tabla1">Nombre</th> {/* 2 */}
+                <th className="tabla1">Icono</th> {/* 3 */}
+                <th className="tabla1">Grado</th> {/* 4*/}
+                <th className="tabla1">Cuestionarios</th> {/* 5 */}
+                <th className="tabla1">Actions</th> {/* 5 */}
               </tr>
             </thead>
 
@@ -236,18 +239,18 @@ return errors;
                 <div class="form-outline">
                    
                     <label class="form-label" for="typeText">Nombre de la materia</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Nombre de la materia" name="nombreMateria" onChange={ManejarEventoDeInputs} value={editar.nombreMateria}/>
+                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Nombre de la materia" name="nombre_materia" onChange={ManejarEventoDeInputs} value={editar.nombre_materia}/>
                     {
-                    alerta.filter(input => input.valorInput == "nombreMateria" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "nombre_materia" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
                     ))
                   }
                     <label class="form-label" for="typeText">Grado</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Grado" name="gradoMateria" onChange={ManejarEventoDeInputs} value={editar.gradoMateria}/>
+                    <input type="number" id="typeText" class="form-control mb-3" placeholder="Grado" name="grado" onChange={ManejarEventoDeInputs} value={editar.grado}/>
                     {
-                    alerta.filter(input => input.valorInput == "gradoMateria" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "grado" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
@@ -279,18 +282,18 @@ return errors;
                 <div class="form-outline">
                    
                     <label class="form-label" for="typeText">Nombre de la materia</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Nombre de la materia" name="nombreMateria" onChange={ManejarEventoDeInputs} value={editar.nombreMateria}/>
+                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Nombre de la materia" name="nombre_materia" onChange={ManejarEventoDeInputs} value={editar.nombre_materia}/>
                     {
-                    alerta.filter(input => input.valorInput == "nombreMateria" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "nombre_materia" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
                     ))
                   }
                     <label class="form-label" for="typeText">Grado</label>
-                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Grado" name="gradoMateria" onChange={ManejarEventoDeInputs} value={editar.gradoMateria}/>
+                    <input type="text" id="typeText" class="form-control mb-3" placeholder="Grado" name="grado" onChange={ManejarEventoDeInputs} value={editar.grado}/>
                     {
-                    alerta.filter(input => input.valorInput == "gradoMateria" && input.estado === true).map(message => (
+                    alerta.filter(input => input.valorInput == "grado" && input.estado === true).map(message => (
                       <div>
                         <span className='text-danger'>{message.mensaje}</span>
                       </div>
