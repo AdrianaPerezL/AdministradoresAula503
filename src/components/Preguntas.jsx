@@ -1,6 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import Fondo from "../assets/img/Fondo.png";
+import logo from "../assets/img/logo1.png"
+
 
 export const Preguntas = () => {
   //!VALIDACIONES DE DATOS
@@ -221,18 +224,15 @@ const Navigate = useNavigate();
   }
   return (
     <main>
-
-
-      <section className="relative overflow-x-auto shadow-md sm:rounded-lg p-12 pt-12 mx-24">
-        <div className="flex justify-between p-12 text-center text-3xl text-white">
-          <Link
-            to="/cuestionario/crear-cuestionario"
-            className="flex justify-start"
-          >
-          </Link>
-          <h1 className="flex justify-center">Agregar Preguntas</h1>
-          <div></div>
-        </div>
+     
+     <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
+        backgroundSize:"cover" }}/>
+     <img src={logo} width="70px" className="m-2"/>
+      <section className="bodypreguntas"/>
+            <h5 className="card-title text-center w-100">Agregar Preguntas</h5>
+        <div/>
+          
+            <div>
 
         <form
           onSubmit={handleLoginSession}
@@ -243,7 +243,7 @@ const Navigate = useNavigate();
             <div className="mb-6 w-96">
               <label
                 htmlFor="pregunta"
-                className="block text-sm font-medium text-white dark:text-white mb-1"
+                className="parrafo"
               >
                 Pregunta
               </label>
@@ -267,14 +267,6 @@ const Navigate = useNavigate();
                 ))}
             </div>
 
-            {/*Puntuación*/}
-            <div className="mb-6 w-full">
-              <label
-                htmlFor="puntuacion"
-                className="block text-sm font-medium text-white dark:text-white mb-1"
-              >
-              </label>
-            </div>
 
             {/*AREA DE RESPUESTAS */}
             <div>
@@ -285,7 +277,7 @@ const Navigate = useNavigate();
               <div className="mb-6 w-full">
                 <label
                   htmlFor="respuesta1"
-                  className="block text-sm font-medium text-white dark:text-white mb-1"
+                  className="parrafo"
                 >
                   Respuesta 1
                 </label>
@@ -315,7 +307,7 @@ const Navigate = useNavigate();
               <div className="mb-6 w-full">
                 <label
                   htmlFor="respuesta2"
-                  className="block text-sm font-medium text-white dark:text-white mb-1"
+                  className="parrafo"
                 >
                   Respuesta 2
                 </label>
@@ -345,7 +337,7 @@ const Navigate = useNavigate();
               <div className="mb-6 w-full">
                 <label
                   htmlFor="respuesta3"
-                  className="block text-sm font-medium text-white dark:text-white mb-1"
+                  className="parrafo"
                 >
                   Respuesta 3
                 </label>
@@ -390,7 +382,7 @@ const Navigate = useNavigate();
                       id="respcorrecta1"
                       onChange={ManejarEventoDeInputs}
                     />{" "}
-                    <span className="px-2">Respuesta 1</span>
+                    <span className="px-">Respuesta 1</span>
                   </div>
                 </div>
 
@@ -423,11 +415,6 @@ const Navigate = useNavigate();
                   </div>
                 </div>
 
-                {/*Checkbox 4*/}
-                <div className="w-full p-1 pt-4">
-                  <div className="">
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -442,7 +429,7 @@ const Navigate = useNavigate();
             </div>
           </div>
         </form>
-      </section>
+      </div>
     </main>
   );
 };
