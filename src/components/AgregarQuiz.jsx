@@ -322,7 +322,7 @@ const AgregarQuiz = () => {
                   {/*<!--Cantidad de preguntas-->*/}
                   <div className="pb-2 w-full py-4">
                     <label htmlFor="cantPC" className="pregunta">
-                      ¿Cuántas preguntas tendrá este cuestionario?
+                   Numero de preguntas
                     </label>
                     <input
                       type="number"
