@@ -180,9 +180,7 @@ const AgregarQuiz = () => {
   return (
     <main>
 
-    <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
-        backgroundSize:"cover" }}>
-     <img src={logo} width="70px" className="m-2"/>
+ 
       <section className="bodyQuiz"/>
         <div className="">
           <div className="card-quiz">
@@ -366,7 +364,7 @@ const AgregarQuiz = () => {
         </div>
       </div>
     </div>
-  </div>
+ 
 </main>
   );
 };

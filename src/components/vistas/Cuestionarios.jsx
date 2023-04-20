@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from '../Sidebar'
 import Navbar from './Navbar'
 import { useEffect } from 'react'
+import AgregarQuiz from '../AgregarQuiz'
 
 
 const Cuestionarios = () => {
@@ -13,7 +14,10 @@ const Cuestionarios = () => {
     <>
   <Sidebar>
     <Navbar />
-    <h1>Cuestionarios</h1>
+    <div className='px-5 contenedordashboard2'>
+
+    <AgregarQuiz/>
+    </div>
   </Sidebar>
     </>
   )
