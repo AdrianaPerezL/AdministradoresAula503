@@ -228,17 +228,19 @@ const Navigate = useNavigate();
      
      <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
         backgroundSize:"cover" }}/>
-     <img src={logo} width="70px" className="m-2"/>
-      <section className="bodypreguntas"/>
+        <img src={logo} width="70px" className="m-2"/>
+        <section className="bodyPreguntas"/>
+        
             <h5 className="card-title text-center">Agregar Preguntas</h5>
-        <div/>
+            <div className="container max-w-screen-lg mx-auto"></div>
+        
           
             <div>
 
         <form
           onSubmit={handleLoginSession}
-          className="mb-8 flex justify-center space-x-48"
-        >
+          className=""
+         >
           <div>
             {/*Pregunta */}
             <div className="mb-6 w-96">
@@ -370,7 +372,7 @@ const Navigate = useNavigate();
             {/*Selecionar respuesta correcta*/}
             <div>
               <h2 className="subtitulo text-center">
-                ¿Cuál es la respuesta correcta?
+                Selecciones una respuesta correcta
               </h2>
               <div className="text-white flex justify-evenly">
                 {/*Checkbox 1*/}
