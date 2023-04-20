@@ -227,22 +227,22 @@ const Navigate = useNavigate();
     <main>
      
      <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
-        backgroundSize:"cover" }}/>
+        backgroundSize:"cover" }}>
         <img src={logo} width="70px" className="m-2"/>
-        <section className="bodyPreguntas"/>
-        
-            <h5 className="card-title text-center">Agregar Preguntas</h5>
+        <section className="bodyPreguntas">
+          <div className="card-preguntas">
+          <h5 className="card-title text-center space">Agregar Preguntas</h5>
             <div className="container max-w-screen-lg mx-auto"></div>
-        
-          
-            <div>
 
-        <form
+                
+            <form
           onSubmit={handleLoginSession}
           className=""
          >
           <div>
             {/*Pregunta */}
+
+            <div className="space">
             <div className="mb-6 w-96">
               <label
                 htmlFor="pregunta"
@@ -269,10 +269,11 @@ const Navigate = useNavigate();
                   </div>
                 ))}
             </div>
-
+            </div>
+           
 
             {/*AREA DE RESPUESTAS */}
-            <div>
+            <div className="space">
               <h2 className="subtitulo text-center">
                 Escriba las posibles respuestas
               </h2>
@@ -370,7 +371,7 @@ const Navigate = useNavigate();
             </div>
 
             {/*Selecionar respuesta correcta*/}
-            <div>
+            <div className="space">
               <h2 className="subtitulo text-center">
                 Seleccione una respuesta correcta
               </h2>
@@ -421,7 +422,7 @@ const Navigate = useNavigate();
               </div>
             </div>
 
-            <div className="flex justify-end pt-4">
+            <div className="flex justify-end pt-4 space">
               <button
                 type="submit"
                 className="btn-siguiente"
@@ -432,6 +433,15 @@ const Navigate = useNavigate();
             </div>
           </div>
         </form>
+
+
+         </div>
+        </section>
+          
+            
+
+      </div> 
+      <div>
       </div>
     </main>
   );
