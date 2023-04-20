@@ -274,7 +274,7 @@ const Navigate = useNavigate();
             {/*AREA DE RESPUESTAS */}
             <div>
               <h2 className="subtitulo text-center">
-                Sección de respuestas
+                Escriba las posibles respuestas
               </h2>
               {/*Respuesta 1*/}
               <div className="mb-6 w-full">
@@ -372,7 +372,7 @@ const Navigate = useNavigate();
             {/*Selecionar respuesta correcta*/}
             <div>
               <h2 className="subtitulo text-center">
-                Selecciones una respuesta correcta
+                Seleccione una respuesta correcta
               </h2>
               <div className="text-white flex justify-evenly">
                 {/*Checkbox 1*/}
