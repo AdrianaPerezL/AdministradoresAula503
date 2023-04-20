@@ -231,7 +231,7 @@ const Navigate = useNavigate();
         <img src={logo} width="70px" className="m-2"/>
         <section className="bodyPreguntas">
           <div className="card-preguntas">
-          <h5 className="card-title text-center">Agregar Preguntas</h5>
+          <h5 className="card-title text-center space">Agregar Preguntas</h5>
             <div className="container max-w-screen-lg mx-auto"></div>
 
                 
@@ -422,7 +422,7 @@ const Navigate = useNavigate();
               </div>
             </div>
 
-            <div className="flex justify-end pt-4">
+            <div className="flex justify-end pt-4 space">
               <button
                 type="submit"
                 className="btn-siguiente"
