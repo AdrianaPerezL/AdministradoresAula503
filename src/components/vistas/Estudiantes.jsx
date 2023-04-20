@@ -40,8 +40,8 @@ getInfo();
     <Navbar/>
         <h1 class="titprin">Perfiles Registrados</h1>
  
-        <div className="container-fluid">
-            <div class="input-group mb-3">
+        <div className="container-fluid" >
+            <div class="input-group mb-3"id='select'>
               <input
                 type="text"
                 class="form-control"
@@ -116,6 +116,133 @@ getInfo();
   
               
                 </tr>
+
+                <tr>
+                  <td>0000</td>
+  
+                  <td>
+                  <p>John Doe</p>
+                  </td>
+  
+                  <td>
+                  <div class="d-flex align-items-center" id="imagen">
+                      <img id="imagen"
+                        class="rounded-circle"
+                        alt=""
+                        width="90px"
+                        height=" 90px"
+                        src="img/imgcircle1.png"
+                      />
+                      <div class="ms-1">
+                        <p class="fw-bold mb-1"></p>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                    </div>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XXXXX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+              
+                </tr>
+
+                <tr>
+                  <td>0000</td>
+  
+                  <td>
+                  <p>John Doe</p>
+                  </td>
+  
+                  <td>
+                  <div class="d-flex align-items-center" id="imagen">
+                      <img id="imagen"
+                        class="rounded-circle"
+                        alt=""
+                        width="90px"
+                        height=" 90px"
+                        src="img/imgcircle1.png"
+                      />
+                      <div class="ms-1">
+                        <p class="fw-bold mb-1"></p>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                    </div>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XXXXX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+              
+                </tr>
+
+                <tr>
+                  <td>0000</td>
+  
+                  <td>
+                  <p>John Doe</p>
+                  </td>
+  
+                  <td>
+                  <div class="d-flex align-items-center" id="imagen">
+                      <img id="imagen"
+                        class="rounded-circle"
+                        alt=""
+                        width="90px"
+                        height=" 90px"
+                        src="img/imgcircle1.png"
+                      />
+                      <div class="ms-1">
+                        <p class="fw-bold mb-1"></p>
+                        <p class="text-muted mb-0"></p>
+                      </div>
+                    </div>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XXXXX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+                  <td>
+                    <p class="fw-normal mb-1">XX</p>
+                  </td>
+  
+              
+                </tr>
+                
               </tbody>
             </table>
           </div>
