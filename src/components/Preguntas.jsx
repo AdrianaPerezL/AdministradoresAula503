@@ -228,17 +228,19 @@ const Navigate = useNavigate();
      
      <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
         backgroundSize:"cover" }}/>
-     <img src={logo} width="70px" className="m-2"/>
-      <section className="bodypreguntas"/>
+        <img src={logo} width="70px" className="m-2"/>
+        <section className="bodyPreguntas"/>
+        
             <h5 className="card-title text-center">Agregar Preguntas</h5>
-        <div/>
+            <div className="container max-w-screen-lg mx-auto"></div>
+        
           
             <div>
 
         <form
           onSubmit={handleLoginSession}
-          className="mb-8 flex justify-center space-x-48"
-        >
+          className=""
+         >
           <div>
             {/*Pregunta */}
             <div className="mb-6 w-96">
@@ -272,7 +274,7 @@ const Navigate = useNavigate();
             {/*AREA DE RESPUESTAS */}
             <div>
               <h2 className="subtitulo text-center">
-                Sección de respuestas
+                Escriba las posibles respuestas
               </h2>
               {/*Respuesta 1*/}
               <div className="mb-6 w-full">
@@ -369,8 +371,8 @@ const Navigate = useNavigate();
 
             {/*Selecionar respuesta correcta*/}
             <div>
-              <h2 className="text-lg text-white text-center p-2">
-                ¿Cuál es la respuesta correcta?
+              <h2 className="subtitulo text-center">
+                Seleccione una respuesta correcta
               </h2>
               <div className="text-white flex justify-evenly">
                 {/*Checkbox 1*/}
@@ -383,7 +385,7 @@ const Navigate = useNavigate();
                       id="respcorrecta1"
                       onChange={ManejarEventoDeInputs}
                     />{" "}
-                    <span className="px-">Respuesta 1</span>
+                    <span className="parrafo">Respuesta 1</span>
                   </div>
                 </div>
 
@@ -397,7 +399,7 @@ const Navigate = useNavigate();
                       id="respcorrecta2"
                       onChange={ManejarEventoDeInputs}
                     />{" "}
-                    <span className="px-2">Respuesta 2</span>
+                    <span className="parrafo">Respuesta 2</span>
                   </div>
                 </div>
               </div>
@@ -412,7 +414,7 @@ const Navigate = useNavigate();
                       id="respcorrecta3"
                       onChange={ManejarEventoDeInputs}
                     />{" "}
-                    <span className="px-2">Respuesta 3</span>
+                    <span className="parrafo">Respuesta 3</span>
                   </div>
                 </div>
 
