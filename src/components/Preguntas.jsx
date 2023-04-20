@@ -369,7 +369,7 @@ const Navigate = useNavigate();
 
             {/*Selecionar respuesta correcta*/}
             <div>
-              <h2 className="text-lg text-white text-center p-2">
+              <h2 className="subtitulo text-center">
                 ¿Cuál es la respuesta correcta?
               </h2>
               <div className="text-white flex justify-evenly">
@@ -383,7 +383,7 @@ const Navigate = useNavigate();
                       id="respcorrecta1"
                       onChange={ManejarEventoDeInputs}
                     />{" "}
-                    <span className="px-">Respuesta 1</span>
+                    <span className="parrafo">Respuesta 1</span>
                   </div>
                 </div>
 
@@ -397,7 +397,7 @@ const Navigate = useNavigate();
                       id="respcorrecta2"
                       onChange={ManejarEventoDeInputs}
                     />{" "}
-                    <span className="px-2">Respuesta 2</span>
+                    <span className="parrafo">Respuesta 2</span>
                   </div>
                 </div>
               </div>
@@ -412,7 +412,7 @@ const Navigate = useNavigate();
                       id="respcorrecta3"
                       onChange={ManejarEventoDeInputs}
                     />{" "}
-                    <span className="px-2">Respuesta 3</span>
+                    <span className="parrafo">Respuesta 3</span>
                   </div>
                 </div>
 
