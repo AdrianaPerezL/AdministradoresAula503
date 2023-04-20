@@ -83,13 +83,9 @@ getInfo();
                   </td>
   
                   <td>
-                  <div class="d-flex align-items-center" id="imagen">
-                      <img id="imagen"
-                        class="rounded-circle"
-                        alt=""
-                        width="90px"
-                        height=" 90px"
-                        src="img/imgcircle1.png"
+                  <div class="d-flex align-items-center" >
+                      <img className='icono' 
+                       alt=""
                       />
                       <div class="ms-1">
                         <p class="fw-bold mb-1"></p>
@@ -125,13 +121,9 @@ getInfo();
                   </td>
   
                   <td>
-                  <div class="d-flex align-items-center" id="imagen">
-                      <img id="imagen"
-                        class="rounded-circle"
-                        alt=""
-                        width="90px"
-                        height=" 90px"
-                        src="img/imgcircle1.png"
+                  <div class="d-flex align-items-center" >
+                      <img className='icono' 
+                       alt=""
                       />
                       <div class="ms-1">
                         <p class="fw-bold mb-1"></p>
@@ -167,13 +159,9 @@ getInfo();
                   </td>
   
                   <td>
-                  <div class="d-flex align-items-center" id="imagen">
-                      <img id="imagen"
-                        class="rounded-circle"
-                        alt=""
-                        width="90px"
-                        height=" 90px"
-                        src="img/imgcircle1.png"
+                  <div class="d-flex align-items-center" >
+                      <img className='icono' 
+                       alt="" src=''
                       />
                       <div class="ms-1">
                         <p class="fw-bold mb-1"></p>
@@ -209,13 +197,9 @@ getInfo();
                   </td>
   
                   <td>
-                  <div class="d-flex align-items-center" id="imagen">
-                      <img id="imagen"
-                        class="rounded-circle"
-                        alt=""
-                        width="90px"
-                        height=" 90px"
-                        src="img/imgcircle1.png"
+                  <div class="d-flex align-items-center" >
+                      <img className='icono' 
+                       alt=""
                       />
                       <div class="ms-1">
                         <p class="fw-bold mb-1"></p>
