@@ -36,6 +36,12 @@ imagen{
     align-items: center;
 }
 
+.icono {
+    height: 70px;
+    width: 70px;
+    margin-left: 25%;
+}
+
 .btn-buscarEstudiante{
     background-color: #572ab0;
     font-family: 'Poppins', sans-serif;
