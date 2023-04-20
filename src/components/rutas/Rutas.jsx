@@ -18,13 +18,11 @@ const Rutas = () => {
   return (
     <>
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<IniciarSesion/>}></Route>
-    </Routes>
+
  
     <Routes>
+    <Route path='/' element={<IniciarSesion/>}></Route>
       <Route path="/dashboard" element={<Dashboard/>}/>
-      <Route path="*" element={<Error404/>}/>
       <Route path="/cuestionarios" element={<Cuestionarios/>}/>
       <Route path="/estudiantes" element={<Estudiantes/>}/>
       <Route path="/materias" element={<Materias/>}/>
@@ -32,7 +30,8 @@ const Rutas = () => {
       <Route path="/agregarquiz" element={<AgregarQuiz/>}/>
       <Route path="/example" element={<Example/>}/>
       <Route path="/preguntas" element={<Preguntas/>}/>
-      
+      <Route path="*" element={<Error404/>}/>
+
    
     </Routes>
  

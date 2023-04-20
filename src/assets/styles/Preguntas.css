@@ -17,11 +17,13 @@
     background-color: #fff;
   }
   
-  .card-body{
+  .card-preguntas{
     background-color: #fff;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border-radius: 5px;
+    width: 600px;
     box-shadow: 18px 18px 15px -3px rgba(0,0,0,0.1);
     
   }
@@ -40,7 +42,7 @@
 
   .subtitulo{
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     color: black;
     align-items: center;
   }
@@ -54,4 +56,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     color: #fff;
+  }
+
+  .space{
+    padding: 20px;
   }
