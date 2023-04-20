@@ -3,6 +3,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import Fondo from "../assets/img/Fondo.png";
 import logo from "../assets/img/logo1.png"
+import "../assets/styles/Preguntas.css";
 
 
 export const Preguntas = () => {
@@ -229,7 +230,7 @@ const Navigate = useNavigate();
         backgroundSize:"cover" }}/>
      <img src={logo} width="70px" className="m-2"/>
       <section className="bodypreguntas"/>
-            <h5 className="card-title text-center w-100">Agregar Preguntas</h5>
+            <h5 className="card-title text-center">Agregar Preguntas</h5>
         <div/>
           
             <div>
@@ -270,7 +271,7 @@ const Navigate = useNavigate();
 
             {/*AREA DE RESPUESTAS */}
             <div>
-              <h2 className="text-lg text-white text-center p-2">
+              <h2 className="subtitulo text-center">
                 Sección de respuestas
               </h2>
               {/*Respuesta 1*/}
@@ -285,7 +286,7 @@ const Navigate = useNavigate();
                   type="text"
                   id="respuesta1"
                   name="respuesta1"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="form-control"
                   value={formulario.respuesta1}
                   onChange={ManejarEventoDeInputs}
                 />
@@ -315,7 +316,7 @@ const Navigate = useNavigate();
                   type="text"
                   id="respuesta2"
                   name="respuesta2"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="form-control"
                   value={formulario.respuesta2}
                   onChange={ManejarEventoDeInputs}
                 />
@@ -345,7 +346,7 @@ const Navigate = useNavigate();
                   type="text"
                   id="respuesta3"
                   name="respuesta3"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="form-control"
                   value={formulario.respuesta3}
                   onChange={ManejarEventoDeInputs}
                 />
@@ -421,7 +422,7 @@ const Navigate = useNavigate();
             <div className="flex justify-end pt-4">
               <button
                 type="submit"
-                className="  text-white bg-green-500 hover:bg-gree-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-400 dark:hover:bg-green-500 dark:focus:ring-green-600"
+                className="btn-siguiente"
                 onClick={alertaValidarChecks}
               >
                 Siguiente
