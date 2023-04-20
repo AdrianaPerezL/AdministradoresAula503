@@ -227,17 +227,14 @@ const Navigate = useNavigate();
     <main>
      
      <div className="vh-100" style={{ backgroundImage: `url(${Fondo})`,  backgroundPosition:"center",
-        backgroundSize:"cover" }}/>
+        backgroundSize:"cover" }}>
         <img src={logo} width="70px" className="m-2"/>
         <section className="bodyPreguntas"/>
-        
             <h5 className="card-title text-center">Agregar Preguntas</h5>
             <div className="container max-w-screen-lg mx-auto"></div>
-        
-          
-            <div>
 
-        <form
+
+            <form
           onSubmit={handleLoginSession}
           className=""
          >
@@ -432,6 +429,9 @@ const Navigate = useNavigate();
             </div>
           </div>
         </form>
+
+      </div> 
+      <div>
       </div>
     </main>
   );
