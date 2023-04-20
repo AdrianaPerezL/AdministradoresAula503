@@ -184,9 +184,9 @@ const AgregarQuiz = () => {
         backgroundSize:"cover" }}>
      <img src={logo} width="70px" className="m-2"/>
       <section className="bodyQuiz"/>
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title text-center w-100">Agregar Cuestionario</h5>
+        <div className="">
+          <div className="card-quiz">
+            <h5 className="card-title text-center w-100 space">Agregar Cuestionario</h5>
         <div>
           <div className="container max-w-screen-lg mx-auto">
             <div>
@@ -254,7 +254,7 @@ const AgregarQuiz = () => {
                       name="materiaC"
                       required
                     >
-                      <option>Ciencias y tecnología</option>
+                      <option>Ciencias Naturales</option>
                       <option>Física</option>
                       <option>Química</option>
                       <option>Biología</option>
