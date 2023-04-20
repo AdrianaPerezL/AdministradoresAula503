@@ -1,4 +1,6 @@
 import React from "react";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import "../../assets/styles/IniciarSesionAdmi.css"
 import Fondo from "../../assets/img/Fondo.png";
 import { useState, useEffect } from "react";
@@ -6,9 +8,20 @@ import logo from "../../assets/img/logo1.png"
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import Cookies from 'universal-cookie';
+import { useNavigate } from "react-router-dom";
+
+
 
 
 function IniciarSesion (){
+
+  const cookies = new Cookies();
+  const navigate = useNavigate();
+
+  
+  const MySwal = withReactContent(Swal);
+
 
   useEffect(() => {
     document.title = "Log In | Administrador"
@@ -82,10 +95,59 @@ function IniciarSesion (){
   console.log("Total de validaciones:", totalValidaciones.length);
 
   //Validación para enviar los datos al servidor
-  if(totalValidaciones.length >=1){
+  if(totalValidaciones.length >=2){
     console.log("Enviar al servidor");
+    enviarDatosLogin()
   }
  };
+
+ async function enviarDatosLogin(){
+  const endpoint = "http://127.0.0.1:8000/api/login";
+
+  let config = {
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json' 
+    }
+};
+
+const UpdateData = {
+  correo: formulario.Carne,
+  contrasena: formulario.Contraseña
+}
+
+try {
+  const resp = await axios.post(endpoint, UpdateData, config);
+  console.log(resp.data,"---------------------");
+
+  const token = resp.data.access_token;
+  const validateSession = cookies.set("tokeApp", { token:token }, {path: "/"} ); 
+
+  Swal.fire('Bienvenido')
+  navigate("/dashboard");
+
+} catch(err){
+  console.error(err);
+
+  MySwal.fire({
+    color: '#572AB0',
+    icon: "error",
+    title: "Inicio de sesión fallido",
+    text: "Usuario no encontrado",
+    width: 400,
+    padding: '3em',
+
+    backdrop: `
+          rgba(0,0,123,0.4)
+          left top
+          no-repeat
+        `
+  });
+
+  console.error(err.response.data.error);
+}
+ }
+
 
  const ValidarInputs = (data) =>{
   console.log(data);

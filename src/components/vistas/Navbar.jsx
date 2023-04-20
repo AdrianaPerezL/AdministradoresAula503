@@ -45,7 +45,7 @@ function Navbar() {
             <ul class="dropdown-menu show position-absolute" aria-labelledby="navbarDropdownMenuLink" id="dropdown" style={{left: "-100px"}}>
           
             <li>
-              <a class="dropdown-item" href="#">Logout</a>
+              <a class="dropdown-item" href="/">Logout</a>
             </li>
           </ul>
           )}

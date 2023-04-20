@@ -91,9 +91,6 @@ const handleEditSession = (e) =>{
   }
  };
 
- 
-  
-
 
  const ValidarInputs = (data) =>{
   console.log(data);

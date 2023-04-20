@@ -11,6 +11,7 @@ import Perfil from '../vistas/Perfil';
 import AgregarQuiz from "../AgregarQuiz";
 import {Preguntas} from "../Preguntas";
 import Example from '../vistas/Example';
+import Error404 from '../vistas/Error404'
 
 
 const Rutas = () => {
@@ -23,6 +24,7 @@ const Rutas = () => {
  
     <Routes>
       <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="*" element={<Error404/>}/>
       <Route path="/cuestionarios" element={<Cuestionarios/>}/>
       <Route path="/estudiantes" element={<Estudiantes/>}/>
       <Route path="/materias" element={<Materias/>}/>
