@@ -4,9 +4,43 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import Sidebar from "../Sidebar";
 import { useEffect, useState } from "react";
-import "../../assets/styles/Materias.css";
+import "../../assets/styles/materias.css";
 
 const Materias = () => {
+
+  const mostrarAlerta = () => {
+    Swal.fire({
+      title: 'Estas seguro?',
+      text: "Estos cambios serán irreversibles",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, borrar',
+
+      backdrop: `
+          rgba(0,0,123,0.4)
+          left top
+          no-repeat
+        ` ,
+
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Hecho!',
+          text: 'La materia ha sido eliminada',
+          icon: 'success',
+
+          backdrop: `
+          rgba(0,0,123,0.4)
+          left top
+          no-repeat
+        ` ,
+        }
+        )
+      }
+    });
+  };
 
   const [datosServidor, setDatosServidor] =  useState([]);
 
@@ -145,14 +179,15 @@ const handleEditSession = (e) =>{
     })
 return errors;
  }
-
+    
   return (
     <>
     <Sidebar>
     <Navbar/>
     <h1 class="titprin">Materias</h1>
-    <button id="botonindicaciones" /* onClick={() =>mostrarAlerta()} */>Agregar
-    <lord-icon src="https://cdn.lordicon.com/ejxwvtlg.json" trigger="hover" colors="outline:#ffffff,primary:#572ab0,secondary:#ffffff" style={{width: '50px', height: '50px'}}
+    <button id="btn-add">
+    <h5 id="agregar">Agregar</h5>
+    <lord-icon id="mas" src="https://cdn.lordicon.com/ejxwvtlg.json" trigger="hover" colors="outline:#ffffff,primary:#572ab0,secondary:#ffffff" style={{width: '50px', height: '50px'}}
     data-bs-toggle="modal" data-bs-target="#exampleModal1">
       </lord-icon>
     </button>
@@ -173,6 +208,174 @@ return errors;
             <tbody>
               <tr>
                 <td>1</td>  {/* 1 */}
+
+                <td>
+                <p>Biología</p> {/* 2 */}
+                </td>
+
+                <td>  {/* 3 */}
+                <div class="d-flex align-items-center" id="imagen">
+                    <img className='icono' src="https://cdn-icons-png.flaticon.com/512/6502/6502964.png" alt=""/>
+                  </div>
+                </td>
+
+                <td> {/* 4 */}
+                  <p class="fw-normal mb-1">1° año</p>
+                </td>
+
+                <td> {/* 5 */}
+                  <p class="fw-normal mb-1">XX</p>
+                </td>
+
+                <td>
+                    <button id="borrar" onClick={() => mostrarAlerta()}>
+                      <lord-icon
+                      src="https://cdn.lordicon.com/jmkrnisz.json"
+                      trigger="hover"
+                      colors="primary:#0ad5bd"
+                      style={{ width: "50px", height: "50px" }}>
+                      </lord-icon>
+                      </button>
+                  
+                    <lord-icon
+                      src="https://cdn.lordicon.com/hkkhwztk.json"
+                      trigger="hover"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                      colors="primary:#0ad5bd"
+                      style={{ width: "50px", height: "50px" }}
+                    ></lord-icon>
+                  </td>
+              </tr>
+            
+              <tr>
+                <td>2</td>  {/* 1 */}
+
+                <td>
+                <p>Física</p> {/* 2 */}
+                </td>
+
+                <td>  {/* 3 */}
+                <div class="d-flex align-items-center" id="imagen">
+                <img className='icono' src="https://cdn-icons-png.flaticon.com/512/1467/1467187.png" alt=""/>
+                  </div>
+                </td>
+
+                <td> {/* 4 */}
+                  <p class="fw-normal mb-1">1° año</p>
+                </td>
+
+                <td> {/* 5 */}
+                  <p class="fw-normal mb-1">XX</p>
+                </td>
+
+                <td>
+                    <button id="borrar" onClick={() => mostrarAlerta()}>
+                      <lord-icon
+                      src="https://cdn.lordicon.com/jmkrnisz.json"
+                      trigger="hover"
+                      colors="primary:#0ad5bd"
+                      style={{ width: "50px", height: "50px" }}>
+                      </lord-icon>
+                      </button>
+
+                    <lord-icon
+                      src="https://cdn.lordicon.com/hkkhwztk.json"
+                      trigger="hover"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                      colors="primary:#0ad5bd"
+                      /* ALERTAAAAAAA */
+                      style={{ width: "50px", height: "50px" }}
+                    ></lord-icon>
+                  </td>
+              </tr>
+
+              <tr>
+                <td>3</td>  {/* 1 */}
+
+                <td>
+                <p>Química</p> {/* 2 */}
+                </td>
+
+                <td>  {/* 3 */}
+                <div class="d-flex align-items-center" id="imagen">
+                <img className='icono' src="https://cdn-icons-png.flaticon.com/512/2470/2470882.png" alt=""/>
+                  </div>
+                </td>
+
+                <td> {/* 4 */}
+                  <p class="fw-normal mb-1">1° año</p>
+                </td>
+
+                <td> {/* 5 */}
+                  <p class="fw-normal mb-1">XX</p>
+                </td>
+
+                <td>
+                <button id="borrar" onClick={() => mostrarAlerta()}>
+                      <lord-icon
+                      src="https://cdn.lordicon.com/jmkrnisz.json"
+                      trigger="hover"
+                      colors="primary:#0ad5bd"
+                      style={{ width: "50px", height: "50px" }}>
+                      </lord-icon>
+                      </button>
+
+                    <lord-icon
+                      src="https://cdn.lordicon.com/hkkhwztk.json"
+                      trigger="hover"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                      colors="primary:#0ad5bd"
+                      style={{ width: "50px", height: "50px" }}
+                    ></lord-icon>
+                  </td>
+              </tr>
+
+              <tr>
+                <td>4</td>  {/* 1 */}
+
+                <td>
+                <p>Estudios Sociales</p> {/* 2 */}
+                </td>
+
+                <td>  {/* 3 */}
+                <div class="d-flex align-items-center" id="imagen">
+                <img className='icono' src="https://cdn-icons-png.flaticon.com/512/3079/3079289.png" alt=""/>
+                  </div>
+                </td>
+
+                <td> {/* 4 */}
+                  <p class="fw-normal mb-1">1° año</p>
+                </td>
+
+                <td> {/* 5 */}
+                  <p class="fw-normal mb-1">XX</p>
+                </td>
+
+                <td>
+                <button id="borrar" onClick={() => mostrarAlerta()}>
+                      <lord-icon
+                      src="https://cdn.lordicon.com/jmkrnisz.json"
+                      trigger="hover"
+                      colors="primary:#0ad5bd"
+                      style={{ width: "50px", height: "50px" }}>
+                      </lord-icon>
+                      </button>
+
+                    <lord-icon
+                      src="https://cdn.lordicon.com/hkkhwztk.json"
+                      trigger="hover"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                      colors="primary:#0ad5bd"
+                      /* ALERTAAAAAAA */
+                      style={{ width: "50px", height: "50px" }}
+                    ></lord-icon>
+                  </td>
+              </tr>
+
+              
+{/* NO TOCAR */}
+              <tr>
+                <td>#</td>  {/* 1 */}
 
                 <td>
                 <p>{}</p> {/* 2 */}
@@ -203,13 +406,14 @@ return errors;
                 </td>
 
                 <td>
-                    <lord-icon
+                <button id="borrar" onClick={() => mostrarAlerta()}>
+                      <lord-icon
                       src="https://cdn.lordicon.com/jmkrnisz.json"
                       trigger="hover"
                       colors="primary:#0ad5bd"
-                      style={{ width: "50px", height: "50px" }}
-                      
-                    ></lord-icon>
+                      style={{ width: "50px", height: "50px" }}>
+                      </lord-icon>
+                      </button>
                     <lord-icon
                       src="https://cdn.lordicon.com/hkkhwztk.json"
                       trigger="hover"
@@ -220,8 +424,6 @@ return errors;
                     ></lord-icon>
                   </td>
               </tr>
-            
-          
          </tbody>
           </table>
         </div>
